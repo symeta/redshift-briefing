@@ -14,7 +14,7 @@
 
 
 # 2. Data Transfer Leveraging on DX rather than public internet
-- [private link]https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html
+- [private link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html)
 
 
 # 3. Redshift Table Design
