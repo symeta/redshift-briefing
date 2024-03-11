@@ -14,5 +14,9 @@
   * [Amazon Managed Workflow for Apache Airflow](https://docs.aws.amazon.com/mwaa/latest/userguide/what-is-mwaa.html)
   * [Glue CLI](https://docs.aws.amazon.com/cli/latest/reference/glue/)
 
+- sizing
+  * [compute capacity](https://docs.aws.amazon.com/redshift/latest/mgmt/serverless-capacity.html)
+  * [configure compare](https://github.com/aws-samples/amazon-redshift-config-compare)
+
 - think forward
   * [RDS for Mysql zero-etl Integration with Redshift](https://aws.amazon.com/about-aws/whats-new/2023/11/amazon-rds-mysql-zero-etl-integration-amazon-redshift-public-preview/)
