@@ -1,34 +1,16 @@
 # redshift-briefing
 
+# A Recommended Architecture Diagram 
 
-# 1. Data Migration
-- Mysql to Redshift
-  * Recommended Way:
-    - Mysql Table -(sample cmd shown as below)-> .csv --> S3 -(COPY)-> Redshift
-    
-    ```sh  
-     mysql -B -u username database_name -h mysql_hostname -e "SELECT * FROM table_name;" | sed "s/'/'/;s/t/","/g;s/^/"/;s/$/"/;s/n//g" > table_name_data.csv
-    ```
-
-    [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html)
+<img width="492" alt="image" src="https://github.com/symeta/redshift-briefing/assets/97269758/b6071d85-94f3-4cc2-8f81-b0e188018ec0">
 
 
-# 2. Data Transfer Leveraging on DX rather than public internet
-- [private link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html)
+- key points:
+  * it's better that mysql instance, redshift cluster, and sagemaker notebook instance in the same vpc.
+ 
+- guidance resource:
+  * [Incremental Data Load from RDS MySQL to Redshift via Glue](https://www.youtube.com/watch?v=R-1go56ip5g)
+  * [Sagemaker Notebook Jupyter work with Redshift](https://github.com/aws-samples/amazon-redshift-commands-using-sagemaker/blob/master/sagemaker_redshift.ipynb)
+  * [Amazon Managed Workflow for Apache Airflow](https://docs.aws.amazon.com/mwaa/latest/userguide/what-is-mwaa.html)
+  * [Glue CLI](https://docs.aws.amazon.com/cli/latest/reference/glue/)
 
-
-# 3. Redshift Table Design
-- Dist Key
-- Sort Key
-- Sizing
-
-# 4. Redshift Operation
-
-- WLM
-- QMR
-- Concurrent-Scaling
-- Resizing
-- Data Sharing
-- Materialized View
-
-# 5. Redshift Performance Optimization
